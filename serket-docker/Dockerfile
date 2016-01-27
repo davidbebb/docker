@@ -7,4 +7,4 @@ RUN apt-get install -y nodejs default-jre default-jdk mongodb
 RUN npm install -g selenium-standalone@latest
 RUN npm install -g phantomjs
 RUN selenium-standalone install
-RUN apt-get install -y make gcc libkrb5-dev g++ python
+RUN apt-get install -y make gcc libkrb5-dev g++ python openssh-client
