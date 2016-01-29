@@ -1,3 +1,9 @@
 FROM davidbebb/nodejs-container:latest
 RUN echo '{"name":"cloud","version":"0.0.0","private":true,"scripts":{"start":"node ./bin/www","test":"node ./bin/test"},"dependencies":{"async":"^1.5.0","bcrypt-nodejs":"0.0.3","body-parser":"~1.12.4","connect-flash":"~0.1.1","cookie-parser":"~1.3.5","crypto-js":"^3.1.5","debug":"~2.2.0","express":"~4.12.4","express-session":"^1.0.4","jade":"~1.9.2","method-override":"~1.0.0","moment":"^2.10.6","mongodb":"~2.0.33","mongoose":"^3.8.23","morgan":"~1.5.3","node-forge":"^0.6.20","nodemailer":"^1.10.0","passport":"^0.1.18","passport-local":"^0.1.6","q":"^1.1.0","request":"^2.27.0","serve-favicon":"~2.2.1"},"devDependencies":{"jasmine":"^2.4.1","requires-regex":"^0.3.3","selenium-standalone":"^4.8.0","selenium-webdriver":"^2.48.2","webdriverio":"^3.4.0"}}' > package.json
 RUN npm install
+RUN npm install -g webdriverio
+RUN npm install -g jasmine
+RUN npm install -g jasmine-node
+RUN npm install -g request
+RUN cd node_modules/mongodb
+RUN npm install
