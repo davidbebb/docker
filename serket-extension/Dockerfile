@@ -7,3 +7,7 @@ RUN npm install -g jasmine-node
 RUN npm install -g request
 RUN cd node_modules/mongodb
 RUN npm install
+RUN mkdir ~/data
+RUN cd ~
+RUN mongod --dbpath ./data/ &
+
